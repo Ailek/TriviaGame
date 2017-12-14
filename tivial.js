@@ -1,5 +1,8 @@
 $(document).ready(function() {
+    // set index to 0
     var index = 0;
+
+    // create timer
     var countdownTimer = {
         time : 30,
         reset: function() {
@@ -33,8 +36,12 @@ $(document).ready(function() {
         }
     };
 
+// setting right and wrongs for the first time
 var correct = 0;
 var wrong = 0;
+
+// my favorite part of this whole assignment!!!
+ // I spent tooo much time here!!! hence the lack of background
 var q1 = {
     question : 'Who is singing about wolves these days?',
     possibleAnswers : ['A. Eminem',
@@ -85,9 +92,10 @@ var q5 = {
     answer : 'B.  Dont You Forget about me'
 };
 
-
+// building the array from the questions
 var questionArray = [q1, q2, q3, q4, q5];
 
+// show question and answer on screen
 function loadQuestion(questionSelection) {
     console.log(questionSelection);
     countdownTimer.reset();
@@ -99,7 +107,7 @@ function loadQuestion(questionSelection) {
 
 }
 
-
+// this is my start
 
 function setup() {
     index = 0;
@@ -113,6 +121,7 @@ function setup() {
 
 function getAnswer() {
 
+// it alerts the answer choice on click
 
     $('.answerchoice').on('click', function() {
       console.log('alert', index);
@@ -127,18 +136,21 @@ function getAnswer() {
     })
 }
 
+// this targets the correct answer
 function answerCorrect() {
     correct++;
     alert("Correct!");
     console.log("correct");
 }
 
-function answerWrong() {
+// this targets the wrong answer
+function answerWrong(display) {
     wrong++;
-    alert("Incorrect!");
-    console.log("wrong");
+    alert("Incorrect!  The correct answer is " + display);
+    console.log("wrong", display);
 }
 
+// this shows the score
 function showScore() {
     $('.question').empty();
     $('.question').append("<h2><p>" + correct + " correct</p></h2>");
@@ -148,7 +160,7 @@ function showScore() {
 
 }
 
-
+// i'm setting up the functions for my buttons
 setup();
 $('.answerchoice').on('click', function() {
  console.log($(this));
@@ -161,33 +173,39 @@ $('.answerchoice').on('click', function() {
  } else if (this.id == 'buttonD') {
     answerChosen = 'D';
  } 
+
+ // get the user answer and compare it with coded answer
  if ((answerChosen == 'A') && (questionArray[index].flags[0] == true)) {
     answerCorrect();
  } else if (answerChosen == 'A') {
-    answerWrong();
+    answerWrong(questionArray[index].answer);
  }
  if ((answerChosen == 'B') && (questionArray[index].flags[1] == true)) {
     answerCorrect();
  } else if (answerChosen == 'B') {
-    answerWrong();
+    answerWrong(questionArray[index].answer);
  }
 if ((answerChosen == 'C') && (questionArray[index].flags[2] == true)) {
     answerCorrect();
  } else if (answerChosen == 'C') {
-    answerWrong();
+    answerWrong(questionArray[index].answer);
  }
 if ((answerChosen == 'D') && (questionArray[index].flags[3] == true)) {
     answerCorrect();
  } else if (answerChosen == 'D') {
-    answerWrong();
+    answerWrong(questionArray[index].answer);
  }
-
+// display code
  $(".question").text('');
  $("#buttonA").text('');
  $("#buttonB").text('');
  $("#buttonC").text('');
  $("#buttonD").text('');
+
+ // positioin indicator
  index++;
+ // if my index is less than my array then load question 
+ // or else hide and show score
  if (index < questionArray.length) {
     loadQuestion(index);
  } else {
