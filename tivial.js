@@ -83,7 +83,7 @@ var q4 = {
 };
 
 var q5 = {
-    question : 'What is the song for the movie "The Breakfast Club',
+    question : 'What is the song for the movie "The Breakfast Club"',
     possibleAnswers :['A. All by myself',
                  'B. Dont You Forget about me',
                  'C. I will survive',
