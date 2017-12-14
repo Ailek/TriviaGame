@@ -85,57 +85,8 @@ var q5 = {
     answer : 'B.  Dont You Forget about me'
 };
 
-var q6 = {
-    question : 'In 1981 a Disney constructed WED-Way People Mover opened at which airport?',
-    possibleAnswers : ['A. Houston Intercontinental Airport',
-                 'B. Orlando International Airport',
-                 'C. Atlanta International Airport',
-                 'D. Dallas/Ft. Worth International Airport'],
-    flags : [true, false, false, false],
-    answer : 'A. Houston Intercontinental Airport'
-};
 
-var q7 = {
-    question : 'What school is attended in the Disney Channel Series, Girl Meets World?',
-    possibleAnswers : ['A. Vintage High School',
-                 'B. Peyton Middle School',
-                 'C. John Quincy Adams Middle School',
-                 'D. Washington High School'],
-    flags : [false, false, true, false],
-    answer : 'C. John Quincy Adams Middle School'
-};
-
-var q8 = {
-    question : 'Which Walt Disney World location opened on the same day as the Disney-MGM Studios theme park on May 1, 1989?',
-    possibleAnswers : ['A. Typhoon Lagoon',
-                 'B. Pleasure Island',
-                 'C. Both A & B',
-                 'D. None of the above'],
-    flags : [false, true, false, false],
-    answer : 'B. Pleasure Island'
-};
-
-var q9 = {
-    question : 'Which of the following films is NOT part of the Walt Disney Studios Silly Symphonies?',
-    possibleAnswers : ['A. The Night Before Christmas',
-                 'B. Three Little Pigs',
-                 'C. The Old Mill',
-                 'D. The Gallopin\' Gaucho'],
-    flags : [false, false, false, true],
-    answer : 'D. The Gallopin\' Gaucho'
-};
-
-var q10 = {
-    question : 'Which wartime activity did the Walt Disney Studios partake in to support the American war effort?',
-    possibleAnswers : ['A. Recycling used film footage',
-                  'B. Designing US Army & US Navy insignia',
-                  'C. Hosted a Studio Victory Garden where employees grew food for their families',
-                  'D. Forced employees to carpool by closing parking lots to non-carpool cars'],
-    flags : [false, true, false, false],
-    answer : 'B. Designing US Army & US Navy insignia'
-}
-
-var questionArray = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
+var questionArray = [q1, q2, q3, q4, q5];
 
 function loadQuestion(questionSelection) {
     console.log(questionSelection);

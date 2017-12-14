@@ -1,8 +1,6 @@
 body {
     font-family: 'Space Mono', monospace;
-    /*padding-bottom: 70px;*/
     font-weight: 400;
-    /*FOOTER RULES*/
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -21,9 +19,6 @@ footer.page-footer {
 }
 
 
-/*****************
-Parallax and Page Styling
-******************/
 
 .parallax-container {
     height: 1010px;
@@ -78,14 +73,6 @@ Parallax and Page Styling
 }
 
 
-/******************
-******************/
-
-
-/**********************
-    BUTTON STYLING
-***********************/
-
 #buttonRow {
     margin-top: 130px;
 }
@@ -104,16 +91,10 @@ Parallax and Page Styling
 }
 
 
-/********************
-  QUESTIONS STYLES
-*********************/
-
 #questionSpace {
     color: #fff;
     margin-top: 40px;
-    /*border: #fff 5px solid;
-  border-radius: 6px;*/
-    padding: 10px;
+     padding: 10px;
     width: 1000px;
     height: 500px;
 }
@@ -123,18 +104,12 @@ Parallax and Page Styling
 }
 
 
-/********************
-*********************/
-
 #timer {
     color: #e74c3c;
     font-size: 47px;
 }
 
 
-/********************
-  ANSWERS STYLES
-*********************/
 
 #choices {
     font-size: 23px;
