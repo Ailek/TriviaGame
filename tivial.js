@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // set index to 0
     var index = 0;
-
+    $(".answers").hide();
     // create timer
     var countdownTimer = {
         time : 30,
@@ -112,11 +112,14 @@ function loadQuestion(questionSelection) {
 function setup() {
     index = 0;
     $('.question').append('<button id="startButton">Start</button>');
-    $('#startButton').on('click', function() {
+
+     $('#startButton').on('click', function() {
         $(this).hide();
+        $(".answers").show();
         countdownTimer.start();
         loadQuestion(index);
     });
+
 }       
 
 function getAnswer() {
